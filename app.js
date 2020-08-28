@@ -1,3 +1,30 @@
+// 3: Primality Test => can only be divided by 1 and its self
+// isPrime(9) = false, isPrime(5) = true
+
+// const isPrime = (n) => {
+//   for (let i = 2; i < n; i++) {
+//      console.log('Running')
+//     if (n % i === 0) {
+//       return false
+//     }
+//   }
+
+//   return true
+// }
+
+// const isPrime = (n) => {
+//   for (let i = 2; i < Math.sqrt(n); i++) {
+//     console.log('Running')
+//     if (n % i === 0) {
+//       return false
+//     }
+//   }
+//   return true
+// }
+
+// console.log(isPrime(5))
+// console.log(isPrime(273))
+
 // 2: Return nth number of fibonacci sequence such that 1, 1, 2, 3, 5, 8, 13, ...
 // T = n = O(n)
 
