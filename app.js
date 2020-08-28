@@ -1,3 +1,31 @@
+// #4 Write 2 functions, the first takes an array and returns min; the second return true is number is even and false if odd
+// min => O(n) for best, avg, and worst
+// isEven => O(1)
+
+const numbers = [6, 7, 3, 13, 9]
+
+const min = (array) => {
+  let minValue = array[0]
+  for (let i = 0; i < array.length; i++) {
+    if (minValue > array[i]) {
+      minValue = array[i]
+    }
+  }
+  return minValue
+}
+
+console.log(min(numbers))
+
+const isEven = (n) => {
+  if (n % 2 === 0) {
+    return true
+  }
+  return false
+}
+
+console.log(isEven(4)) // true
+console.log(isEven(5)) // false
+
 // 3: Primality Test => can only be divided by 1 and its self
 // isPrime(9) = false, isPrime(5) = true
 
