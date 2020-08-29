@@ -1,30 +1,63 @@
+// 5: isPowerOfTwo(8) => true, isPowerOfTwo(5) => false. Determine whether n is a  power of two by dividing numberand future division resuls by two, until one is reach and the remainder is zero.
+
+// const isPowerOfTwo = (n) => {
+//   if (n < 1) {
+//     return false
+//   }
+
+//   let dividedNumber = n
+
+//   while (dividedNumber !== 1) {
+//     console.log('executing ...')
+//     if (dividedNumber % 2 !== 0) {
+//       return false
+//     }
+//     dividedNumber = dividedNumber / 2
+//   }
+//   return true
+// }
+
+const isPowerOfTwo = (n) => {
+  if (n < 1) return false
+
+  return (n & (n - 1)) === 0
+}
+
+console.log(isPowerOfTwo(64))
+
+// console.log(isPowerOfTwo(8))
+// console.log(isPowerOfTwo(5))
+// console.log(isPowerOfTwo(20))
+// console.log(isPowerOfTwo(16))
+// console.log(isPowerOfTwo(13))
+
 // #4 Write 2 functions, the first takes an array and returns min; the second return true is number is even and false if odd
 // min => O(n) for best, avg, and worst
 // isEven => O(1)
 
-const numbers = [6, 7, 3, 13, 9]
+// const numbers = [6, 7, 3, 13, 9]
 
-const min = (array) => {
-  let minValue = array[0]
-  for (let i = 0; i < array.length; i++) {
-    if (minValue > array[i]) {
-      minValue = array[i]
-    }
-  }
-  return minValue
-}
+// const min = (array) => {
+//   let minValue = array[0]
+//   for (let i = 0; i < array.length; i++) {
+//     if (minValue > array[i]) {
+//       minValue = array[i]
+//     }
+//   }
+//   return minValue
+// }
 
-console.log(min(numbers))
+// console.log(min(numbers))
 
-const isEven = (n) => {
-  if (n % 2 === 0) {
-    return true
-  }
-  return false
-}
+// const isEven = (n) => {
+//   if (n % 2 === 0) {
+//     return true
+//   }
+//   return false
+// }
 
-console.log(isEven(4)) // true
-console.log(isEven(5)) // false
+// console.log(isEven(4)) // true
+// console.log(isEven(5)) // false
 
 // 3: Primality Test => can only be divided by 1 and its self
 // isPrime(9) = false, isPrime(5) = true
