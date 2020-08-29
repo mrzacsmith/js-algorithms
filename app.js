@@ -1,3 +1,19 @@
+//  6: calculate the factorial of a number where fact(3) = 3*2*1 = 6
+// Time complexity = O(n)
+
+// const fact = (n) => {
+//   let result = 1
+//   if (n < 1) return 'invalid'
+//   for (let i = 2; i <= n; i++) {
+//     result *= i
+//   }
+//   return result
+// }
+
+// console.log(fact(1))
+// console.log(fact(4))
+// console.log(fact(5))
+
 // 5: isPowerOfTwo(8) => true, isPowerOfTwo(5) => false. Determine whether n is a  power of two by dividing numberand future division resuls by two, until one is reach and the remainder is zero.
 
 // const isPowerOfTwo = (n) => {
@@ -19,7 +35,6 @@
 
 // const isPowerOfTwo = (n) => {
 //   if (n < 1) return false
-
 //   return (n & (n - 1)) === 0
 // }
 
