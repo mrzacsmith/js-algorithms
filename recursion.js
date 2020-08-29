@@ -17,7 +17,7 @@
 //   return fib(n - 1, count) + fib(n - 2, count)
 // }
 
-// console.log('=', fib(30), 'count:', count)
+// console.log('=', fib(20), 'count:', count)
 
 // 1: Rewrite the factorial function using recursion
 // Time complexity = O(n)
