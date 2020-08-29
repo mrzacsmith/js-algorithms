@@ -15,6 +15,12 @@
 //   return result
 // }
 
+// const memo = {} // to view the store of memo
+// fib(5, memo)
+// console.log(count)
+// console.log(memo)
+// count = 0
+
 // fib(5, {})
 // console.log(count)
 // count = 0
