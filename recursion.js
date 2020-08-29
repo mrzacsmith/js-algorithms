@@ -1,3 +1,33 @@
+// Using dynamic programmig to improve recursive big O.
+// Time complexity is O(n)
+
+// let count = 0
+// const fib = (n, memo) => {
+//   count++
+//   let result
+//   if (memo[n]) return memo[n]
+//   if (n === 0 || n === 1) {
+//     result = 1
+//   } else {
+//     result = fib(n - 1, memo) + fib(n - 2, memo)
+//   }
+//   memo[n] = result
+//   return result
+// }
+
+// fib(5, {})
+// console.log(count)
+// count = 0
+// fib(10, {})
+// console.log(count)
+// count = 0
+// fib(15, {})
+// console.log(count)
+// count = 0
+// fib(20, {})
+// console.log(count)
+// count = 0
+
 // Review of fibonacci using recursion
 // Time complexity: there are 9 function calls for fib(4), 15 function calls for fib(5), 25 function calls for fib(6)   [1,1,2,3,5,8,13,21]
 // loop-based O(n)
