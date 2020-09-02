@@ -45,6 +45,8 @@ function maximumToys(prices, k) {
     if (a < b) return -1
     return 0
   })
+  // prices.sort((a, b) => a - b)
+
   let counter = 0
   let total = 0
 
@@ -56,4 +58,5 @@ function maximumToys(prices, k) {
   return counter
 }
 
-console.log(maximumToys(7, 50))
+console.log('hello')
+console.log(maximumToys(prices, 50))
