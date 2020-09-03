@@ -1,27 +1,31 @@
 // 1: liner search fucntion before review, O(n) worst case
-//
+// binary search is O(log n)
 // const array = [3, 10, -3, 48, 5, 33, 99]
 
-let numArray = [-1, 0, 3, 4, 9, 12]
+let numArray = [-1, 0, 3, 4, 9, 12, 21, 23, 45, 49, 66, 72]
 
 const bSearch = (arr, target) => {
   let startInd = 0
   let endInd = arr.length - 1
 
   while (startInd <= endInd) {
-    const midInd = Math.floor((endInd - startInd) / 2)
+    console.log('Running')
+    const midInd = startInd + Math.floor((endInd - startInd) / 2)
 
     if (target === arr[midInd]) {
       return midInd
     }
 
     if (arr[midInd] < target) {
-      startInd
+      startInd = midInd + 1
+    } else {
+      endInd = midInd - 1
     }
   }
+  return -1
 }
 
-console.log(bSearch(numArray, 9))
+console.log(bSearch(numArray, 72))
 
 // const bSearch = (nums, target) => {
 //   let left = 0
