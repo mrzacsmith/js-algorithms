@@ -4,6 +4,7 @@
 // Worst case => exact start or end O(log n) because it gets split each iteration
 // Average case => O(log n)
 // const array = [3, 10, -3, 48, 5, 33, 99]
+// Review the Master Theorem for Big O of recursive
 
 // let numArray = [-1, 0, 3, 4, 9, 12, 21, 23, 45, 49, 66, 72]
 
@@ -26,29 +27,29 @@
 //   return recBsearch(arr.slice(startInd, endInd + 1), target, offset)
 // }
 
-// const bSearch = (arr, target) => {
-//   let startInd = 0
-//   let endInd = arr.length - 1
+const bSearch = (arr, target) => {
+  let startInd = 0
+  let endInd = arr.length - 1
 
-//   while (startInd <= endInd) {
-//     console.log('Running')
-//     const midInd = startInd + Math.floor((endInd - startInd) / 2)
+  while (startInd <= endInd) {
+    console.log('Running')
+    const midInd = startInd + Math.floor((endInd - startInd) / 2)
 
-//     if (target === arr[midInd]) {
-//       return midInd
-//     }
+    if (target === arr[midInd]) {
+      return midInd
+    }
 
-//     if (arr[midInd] < target) {
-//       startInd = midInd + 1
-//     } else {
-//       endInd = midInd - 1
-//     }
-//   }
-//   return -1
-// }
+    if (arr[midInd] < target) {
+      startInd = midInd + 1
+    } else {
+      endInd = midInd - 1
+    }
+  }
+  return -1
+}
 
-// console.log(bSearch(numArray, 72))
-// console.log(recBsearch(numArray, 72, 0))
+console.log(bSearch(numArray, 72))
+console.log(recBsearch(numArray, 72, 0))
 
 // const bSearch = (nums, target) => {
 //   let left = 0
