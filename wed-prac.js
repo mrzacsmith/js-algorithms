@@ -1,4 +1,4 @@
-// #2
+// #2 -----------------------------------------------------------------------------------------
 // Given a string s consisting of small English letters, find and return the first instance of a non-repeating character in it. If there is no such character, return '_'.
 
 // Example
@@ -15,7 +15,42 @@
 // [output] char
 // The first non-repeating character in s, or '_' if there are no characters that do not repeat.
 
-// #1
+// const repeat = (s) => {
+//   // create a storage obj
+//   let wordObj = {}
+//   // split string into new array
+//   let stringArray = s.split('')
+
+//   // use char for each item split & for...of https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for...of
+//   for (let char of stringArray) {
+//     // check if isNOT undefined (no empty) +1 for repeated characters
+//     if (wordObj[char] !== undefined) {
+//       wordObj[char] += 1
+//       console.log(wordObj[char])
+//     } else {
+//       wordObj[char] = 1 // first entry
+//       console.log(wordObj[char])
+//     }
+
+//     // for loop using key with for...of
+//     for (key of Object.keys(wordObj)) {
+//       console.log(wordObj[key], ' ', key)
+//       if (wordObj[key] === 1) {
+//         return key
+//       }
+//     }
+//   }
+
+//   console.log(wordObj)
+//   // all characters repeat
+//   return '_'
+// }
+
+// console.log(repeat('aabbccddeffgg'))
+// console.log(repeat('z'))
+// console.log(repeat('abacabad'))
+
+// #1 ---------------------------------------------------------------------------------------
 // You work in a factory, and your job is to take items from a conveyor belt and pack them into boxes. Each box can hold a maximum of 10 kgs. Given an array containing the weight (in kg) of each item, how many boxes would you need to pack all of the items?
 // boxes([2, 1, 2, 5, 4, 3, 6, 1, 1, 9, 3, 2]) ➞ 5
 
