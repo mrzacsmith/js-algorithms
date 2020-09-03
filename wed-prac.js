@@ -1,3 +1,24 @@
+// #3 -----------------------------------------------------------------------------------------
+// Write a function that moves all elements of one type to the end of the array. edabit
+// moveToEnd([1, 3, 2, 4, 4, 1], 1) ➞ [3, 2, 4, 4, 1, 1]
+// Move all the 1s to the end of the array.
+
+// moveToEnd([7, 8, 9, 1, 2, 3, 4], 9) ➞ [7, 8, 1, 2, 3, 4, 9]
+
+// moveToEnd(["a", "a", "a", "b"], "a") ➞ ["b", "a", "a", "a"]
+
+// const moveToEnd = (array, element) => {
+//   // set array and filter everything but element
+//   let withoutElement = array.filter((num) => num !== element)
+//   // same as above but with element
+//   let withElement = array.filter((num) => num === element)
+//   // return without and concat with
+//   return withoutElement.concat(withElement)
+// }
+
+// console.log(moveToEnd([7, 8, 9, 1, 2, 3, 4], 9))
+// console.log(moveToEnd(['a', 'a', 'a', 'b'], 'a'))
+
 // #2 -----------------------------------------------------------------------------------------
 // Given a string s consisting of small English letters, find and return the first instance of a non-repeating character in it. If there is no such character, return '_'.
 
