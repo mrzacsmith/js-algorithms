@@ -27,6 +27,8 @@
 //   return recBsearch(arr.slice(startInd, endInd + 1), target, offset)
 // }
 
+// ------------------------- BEST choice for me --------------------------------------
+
 const bSearch = (arr, target) => {
   let startInd = 0
   let endInd = arr.length - 1
@@ -47,6 +49,8 @@ const bSearch = (arr, target) => {
   }
   return -1
 }
+
+// ---------------------------------------------------------------------------------------------
 
 console.log(bSearch(numArray, 72))
 console.log(recBsearch(numArray, 72, 0))
@@ -70,6 +74,7 @@ console.log(recBsearch(numArray, 72, 0))
 
 // console.log(bSearch(numArray, 9))
 
+// ------------------------------------ BEST linear ----------------------------------------
 // const linSearch = (n, arr) => {
 //   console.log(n, array) //1
 //   for (let i = 0; i < arr.length; i++) {
@@ -78,6 +83,8 @@ console.log(recBsearch(numArray, 72, 0))
 //   }
 //   return `number not found, count` //1
 // }
+
+// ------------------------------------------------------------------------------------------
 
 // const forSearch = (n, arr) => {
 //   let index = 0
