@@ -2,8 +2,13 @@
 
 const sort = (array) => {
   const copiedArray = [...array]
+  console.log('FUNCTION STARTING')
+  console.log(array)
 
-  if (copiedArray.length <= 1) return copiedArray
+  if (copiedArray.length <= 1) {
+    console.log('ONLY ONE ITEM - RETURNING', array)
+    return copiedArray
+  }
 
   const smallerElementsArray = []
   const largerElementsArray = []
@@ -20,6 +25,11 @@ const sort = (array) => {
       largerElementsArray.push(currentElement)
     }
   }
+
+  console.log('AFTER WHILE LOOP')
+  console.log(smallerElementsArray)
+  console.log(centerElementsArray)
+  console.log(largerElementsArray)
   const smallerElementsSortedArray = sort(smallerElementsArray)
   const largerElementsSortedArray = sort(largerElementsArray)
   return smallerElementsSortedArray.concat(
@@ -28,8 +38,8 @@ const sort = (array) => {
   )
 }
 
-const sortedArray = sort([5, -10, 10, -3, -1, 20, 100, -3, 19])
-// const sortedArray = sort([5, 10, -3])
+// const sortedArray = sort([5, -10, 10, -3, -1, 20, 100, -3, 19])
+const sortedArray = sort([5, -3, 10, -3, -15])
 console.log(sortedArray)
 
 // 1: Bubble sort
