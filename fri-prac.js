@@ -1,3 +1,8 @@
+// #2
+
+// console.log(board1)
+// console.log(board2)
+
 // #1 Phone number word decorder
 // Create a program that converts a phone number with letters to one with only numbers.
 // All inputs will be formatted as a string representing a proper phone number in the format XXX-XXX-XXXX or (XXX)XXX-XXXX, using numbers and capital letters.
@@ -71,4 +76,4 @@ const textToNum = (phone) => {
 
 // console.log(textToNum('123-647-EYES'))
 // console.log(textToNum('(325)444-TEST'))
-console.log(textToNum('(345)EYE-TEST'))
+// console.log(textToNum('(345)EYE-TEST'))
