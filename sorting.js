@@ -1,4 +1,36 @@
-// 2: Quicksort
+// 2: Quicksort (uses recursion to improve Big O)
+
+const sort = (array) => {
+  const copiedArray = [...array]
+
+  if (copiedArray.length <= 1) return copiedArray
+
+  const smallerElementsArray = []
+  const largerElementsArray = []
+  const pivotElement = copiedArray.shift()
+  const centerElementsArray = [pivotElement]
+
+  while (copiedArray.length) {
+    const currentElement = copiedArray.shift()
+    if (currentElement === pivotElement) {
+      centerElementsArray.push(currentElement)
+    } else if (currentElement < pivotElement) {
+      smallerElementsArray.push(currentElement)
+    } else {
+      largerElementsArray.push(currentElement)
+    }
+  }
+  const smallerElementsSortedArray = sort(smallerElementsArray)
+  const largerElementsSortedArray = sort(largerElementsArray)
+  return smallerElementsSortedArray.concat(
+    centerElementsArray,
+    largerElementsSortedArray
+  )
+}
+
+const sortedArray = sort([5, -10, 10, -3, -1, 20, 100, -3, 19])
+// const sortedArray = sort([5, 10, -3])
+console.log(sortedArray)
 
 // 1: Bubble sort
 // Time compexity
