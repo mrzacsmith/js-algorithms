@@ -29,31 +29,31 @@
 
 // ------------------------- BEST choice for me --------------------------------------
 
-const bSearch = (arr, target) => {
-  let startInd = 0
-  let endInd = arr.length - 1
+// const bSearch = (arr, target) => {
+//   let startInd = 0
+//   let endInd = arr.length - 1
 
-  while (startInd <= endInd) {
-    console.log('Running')
-    const midInd = startInd + Math.floor((endInd - startInd) / 2)
+//   while (startInd <= endInd) {
+//     console.log('Running')
+//     const midInd = startInd + Math.floor((endInd - startInd) / 2)
 
-    if (target === arr[midInd]) {
-      return midInd
-    }
+//     if (target === arr[midInd]) {
+//       return midInd
+//     }
 
-    if (arr[midInd] < target) {
-      startInd = midInd + 1
-    } else {
-      endInd = midInd - 1
-    }
-  }
-  return -1
-}
+//     if (arr[midInd] < target) {
+//       startInd = midInd + 1
+//     } else {
+//       endInd = midInd - 1
+//     }
+//   }
+//   return -1
+// }
 
 // ---------------------------------------------------------------------------------------------
 
-console.log(bSearch(numArray, 72))
-console.log(recBsearch(numArray, 72, 0))
+// console.log(bSearch(numArray, 72))
+// console.log(recBsearch(numArray, 72, 0))
 
 // const bSearch = (nums, target) => {
 //   let left = 0
