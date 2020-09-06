@@ -17,3 +17,33 @@
 ## time complexity
 
 - Because of nest loops the average and worst case tend towards O(n^2)
+
+## code sample
+
+```js
+const cRA = require('mzs-randomarray')
+const needsSorting = cRA(12)
+console.table(needsSorting)
+
+const sort = (arr) => {
+  let resultArray = [...arr]
+
+  for (let outer = 0; outer < resultArray.length; outer++) {
+    let outerEl = resultArray[outer]
+    for (let inner = outer + 1; inner < resultArray.length; inner++) {
+      let innerEl = resultArray[inner]
+
+      if (outerEl > innerEl) {
+        resultArray[outer] = innerEl
+        resultArray[inner] = outerEl
+
+        outerEl = resultArray[outer]
+        innerEl = resultArray[inner]
+      }
+    }
+  }
+  return resultArray
+}
+
+console.table(sort(needsSorting))
+```
