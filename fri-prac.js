@@ -1,3 +1,33 @@
+// #3 Bubble sort
+
+const sort = (array) => {}
+
+// ------------------------------- random array generator ---------------
+// created NPM package mzs-randomArray
+
+// const randArr = []
+
+// const arrLength = (range) => {
+//   return Math.floor(Math.random() * range) + 3
+// }
+// const arrValues = () => {
+//   return Math.floor(Math.random() * 500) - 30
+// }
+
+// const createRandArray = (n, cb = arrValues) => {
+//   let max = arrLength(n)
+//   for (let i = 0; i < max; i++) {
+//     let ran = cb()
+//     randArr.push(ran)
+//     console.log(randArr)
+//   }
+//   return randArr
+// }
+
+// console.log('new array', createRandArray(18))
+// // ----------------------------------- random array generator --------------
+// const sortedArray = createRandArray(15)
+// console.log(sortedArray)
 // #2
 
 // console.log(board1)
