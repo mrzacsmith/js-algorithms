@@ -1,7 +1,22 @@
 // #3 Bubble sort
+const createRandomArray = require('mzs-randomarray')
 
-const sort = (array) => {}
+const sort = (array) => {
+  const resultArray = [...array]
 
+  for (let outer = 0; outer < resultArray.length; outer++) {
+    let outerEl = resultArray[outer]
+    for (let inner = outer + 1; inner < resultArray.length; inner++) {
+      let innerEl = resultArray[inner]
+
+      if (outerEl > innerEl) {
+        resultArray[outerEl] = innerEl
+        resultArray[innerEl] = outerEl
+      }
+    }
+  }
+}
+console.table(createRandomArray(12))
 // ------------------------------- random array generator ---------------
 // created NPM package mzs-randomArray
 
