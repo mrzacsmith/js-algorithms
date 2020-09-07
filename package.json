@@ -18,6 +18,6 @@
   },
   "homepage": "https://github.com/mrzacsmith/js-algorithms#readme",
   "dependencies": {
-    "mzs-randomarray": "^1.0.0"
+    "mzs-randomarray": "^1.1.3"
   }
 }
