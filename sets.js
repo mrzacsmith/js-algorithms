@@ -4,16 +4,16 @@
 //  Time complexity
 //  Space complexity
 
-// const cartProducts = (setA, setB) => {
-//   const product = []
-//   for (const setAEl of setA) {
-//     for (const setBEl of setB) {
-//       console.log('running')
-//       product.push([setAEl, setBEl])
-//     }
-//   }
-//   return product
-// }
+const cartProducts = (setA, setB) => {
+  const product = []
+  for (const setAEl of setA) {
+    for (const setBEl of setB) {
+      console.log('running')
+      product.push([setAEl, setBEl])
+    }
+  }
+  return product
+}
 
 const cartesian = (...sets) => {
   let tempProduct = sets[0]
