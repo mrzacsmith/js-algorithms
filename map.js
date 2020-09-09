@@ -1,4 +1,5 @@
 // The Map object holds key-value pairs and remembers the original insertion order of the keys. Any value (both objects and primitive values) may be used as either a key or a value.
+// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map
 
 // in a Map, there are many options
 //  .set('jessie', {town: 'albuquerue, age: 24})
@@ -51,3 +52,20 @@ console.log(Array.from(contacts.keys()))
 console.log(Array.from(contacts.values()))
 const arr = Array.from(contacts.values())
 console.log('town', arr[0].town)
+
+let first = new Map([
+  [1, 'one'],
+  [2, 'two'],
+  [3, 'three'],
+])
+
+let second = new Map([
+  [1, 'uno'],
+  [2, 'dos'],
+  [3, 'tres'],
+])
+
+let merged = new Map([...first, ...second])
+console.log(merged.get(1))
+console.log(merged.get(2))
+console.log(merged.get(3))
