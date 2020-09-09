@@ -44,3 +44,10 @@ for (let key of contacts.keys()) {
 for (let value of contacts.values()) {
   console.log(value)
 }
+
+console.log(contacts.has(names[1]))
+console.log(Array.from(contacts))
+console.log(Array.from(contacts.keys()))
+console.log(Array.from(contacts.values()))
+const arr = Array.from(contacts.values())
+console.log('town', arr[0].town)
