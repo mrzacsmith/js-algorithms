@@ -3,15 +3,18 @@
 // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set
 
 // 2: Cartesian products - More than 2 sets
-//  Time complexity
-//  Space complexity
+//  Time complexity O(n*m*... ) ~ O(n^x)
+//  Space complexity O(n*m) ~ O(n^x)
 
 const cartProducts = (setA, setB) => {
   const product = []
-  for (const setAEl of setA) {
+  for (let setAEl of setA) {
+    if (!Array.isArray(setAEl)) {
+      setAEl = [setAEl]
+    }
     for (const setBEl of setB) {
-      console.log('running')
-      product.push([setAEl, setBEl])
+      // console.log('running')
+      product.push([...setAEl, setBEl])
     }
   }
   return product
@@ -19,13 +22,18 @@ const cartProducts = (setA, setB) => {
 
 const cartesian = (...sets) => {
   let tempProduct = sets[0]
-  console.log(tempProduct)
-  for (const set of sets) {
-    // cartProducts(tempProduct, set)
+  // console.log(tempProduct)
+  for (let i = 1; i < sets.length; i++) {
+    tempProduct = cartProducts(tempProduct, sets[i])
   }
-}
 
-cartesian()
+  return tempProduct
+}
+const colors = ['blue', 'red', 'green']
+const sizes = ['s', 'm', 'l', 'xl']
+const styles = ['round neck', 'v neck']
+
+console.log(cartesian(colors, sizes, styles))
 
 // 1: Cartesian Products, basically
 //  Time complexity   O(n*m) ~ O(n^2)
@@ -42,9 +50,6 @@ cartesian()
 //   return product
 // }
 
-const colors = ['blue', 'red', 'green']
-const sizes = ['s', 'm', 'l', 'xl']
-const styles = ['round neck', 'v neck']
 // console.log(cartProducts(colors, sizes))
 
 let stuffSet = new Set()
